@@ -2,7 +2,7 @@ class Board
     attr_reader :grid
 
     def initialize(grid=[[nil,nil,nil],[nil,nil,nil],[nil,nil,nil]])
-        @grid = grid
+        @grid = grid.dup
     end
 
     def place_mark(coord, symb)
@@ -16,7 +16,6 @@ class Board
     end
 
     def winner
-        p grid
         # check rows and columns
         (0..2).each do |el|
             return grid[0][el] if grid[0][el] && grid[0][el] == grid[1][el] && grid[0][el] == grid[2][el]
