@@ -2,7 +2,7 @@ class Board
     attr_reader :grid
 
     def initialize(grid=[[nil,nil,nil],[nil,nil,nil],[nil,nil,nil]])
-        @grid = grid.dup
+        @grid = grid
     end
 
     def place_mark(coord, symb)

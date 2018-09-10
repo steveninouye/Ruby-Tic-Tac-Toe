@@ -27,7 +27,8 @@ class ComputerPlayer
                     type = check_directions([x,y])
                     case type
                         when "win"
-                            return [x,y]
+                            # if there is a winning move, make the move
+                            return [x,y] 
                         when "lose"
                             lose_coord.push([x,y])
                         when "neutral"
